@@ -1,0 +1,25 @@
+button
+{
+    border-radius: 15px;
+    font-size: 30px;
+}
+
+.flex-row
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-col
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calculator
+{
+    border: 1px solid black;
+    width: 50%;
+    height: 80%;
+}
