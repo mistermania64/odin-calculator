@@ -1,5 +1,6 @@
 let num1, num2 = 0;
 let operator = 0;
+let solution = 0;
 
 let displayArea = document.querySelector('#display');
 let numpad = document.querySelector('#numpad');
@@ -28,7 +29,6 @@ let multiply = function(num1, num2)
 
 let operate = function(num1, num2, operator)
 {
-    let solution = 0;
 
     switch(operator)
     {
@@ -54,8 +54,11 @@ let operate = function(num1, num2, operator)
 
 let numberPressed = function(number)
 {
-    if (displayArea.textContent !='')
+    if (solution != 0)
+    {
+        solution = 0;
         displayArea.textContent = '';
+    }
 
     displayArea.textContent += number.textContent;
 }
@@ -122,19 +125,20 @@ for (let i=4; i>0; i--)
     operators.appendChild(button);
 }
 
-for (let i=3; i>0; i--)
+for (let i=2; i>0; i--)
 {
     let button = document.createElement('button');
     switch(i)
     {
-        case 3:
+        case 2:
             button.textContent = '=';
             button.addEventListener('click', equalsPressed);
             break;
             
-        case 2:
-            button.textContent = '.'
-            break;
+        // case 2:
+        //     button.textContent = '.'
+        //     button.addEventListener('click', decimalPressed);
+        //     break;
 
         case 1:
             button.textContent = 'C'

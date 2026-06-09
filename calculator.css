@@ -4,6 +4,11 @@ button
     font-size: 30px;
 }
 
+button:active
+{
+    background-color: orange;
+}
+
 .flex-row
 {
     display: flex;
